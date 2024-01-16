@@ -45,9 +45,9 @@ function Profile() {
     <div>
       <Harder />
       <div className="pic">
-        <Pic />
+        <Pic/>
       </div>
-    </div>
+    </div> 
   );
 }
 

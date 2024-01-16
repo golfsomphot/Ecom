@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import imageUrl1 from "../../Assets/images.jpeg"
+import imageUrl1 from "../../Assets/bg.jpeg";
+import marlene from "../../Assets/pexels-marlene-leppänen-1183266.jpg"
 import Harder from "./Harder";
 
 function Profile() {
-  
   const [Imagechange, setImagechange] = useState(imageUrl1);
   const Pic = () => {
     const fileInputRef = useRef(null);
@@ -19,24 +19,35 @@ function Profile() {
         // อ่าน URL ของรูปจากไฟล์ที่เลือก
         const imageUrl = URL.createObjectURL(file);
         setImagechange(imageUrl);
-        console.log("Imagechange",Imagechange)
+        console.log("Imagechange", Imagechange);
       }
     };
 
     return (
-      <div>
-        <img
-          src={Imagechange}
-          alt=""
-          style={{ padding: "50px", borderRadius: "50%", cursor: "pointer" }}
-          onClick={handleImageClick}
-        />
-        <input
-          type="file"
-          ref={fileInputRef}
-          style={{ display: "none" }}
-          onChange={handleFileChange}
-        />
+      <div className="r" >
+        <div className="container">
+          <div className="row" style={{ height: "100vh" }}>
+            <div className="col-6 r">
+              <img
+              style={{ borderRadius: "2%", cursor: "pointer" }} 
+              src={marlene} alt="" />
+            </div>
+            <div className="col-6">
+              <img
+                src={Imagechange}
+                alt=""
+                style={{ borderRadius: "2%", cursor: "pointer" }}
+                onClick={handleImageClick}
+              />
+              <input
+                type="file"
+                ref={fileInputRef}
+                style={{ display: "none" }}
+                onChange={handleFileChange}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   };
@@ -45,9 +56,9 @@ function Profile() {
     <div>
       <Harder />
       <div className="pic">
-        <Pic/>
+        <Pic />
       </div>
-    </div> 
+    </div>
   );
 }
 

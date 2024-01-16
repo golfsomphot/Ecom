@@ -43,8 +43,8 @@ const Harder = () => {
               <Button style={{marginRight:'5%'}} className="btnSearch" variant="outline-success">
                 Search
               </Button>
-              <Button style={{marginRight:'5%'}} href="/" className="btnSearch" variant="outline-danger">
-                Logout
+              <Button style={{marginRight:'5%'}} href="Login" className="btnSearch" variant="outline-danger">
+                login
               </Button>
             </Form>
             

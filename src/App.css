@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.btnlogin {
+  width: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login {
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-attachment: fixed;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2As3yVNacdhwUZNvZ4rziHNz8zfM1rztgAw&usqp=CAU);
+  background-attachment: fixed;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  display: block;
+  width: 100%;
+  border: none;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: beige;
+  
+}
+ 
+label {
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+.from-control{
+  background-color: azure;
+  text-align: center;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+  justify-content: center;
+  height: 30%;
+ 
+}
+.pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+   
 }

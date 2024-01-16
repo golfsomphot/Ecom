@@ -39,7 +39,6 @@ const Harder = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
-                 
               />
               <Button style={{marginRight:'5%'}} className="btnSearch" variant="outline-success">
                 Search

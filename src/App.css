@@ -3,10 +3,10 @@
 }
 
 .login {
-  /* position: absolute; */
+  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   background-attachment: fixed;
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2As3yVNacdhwUZNvZ4rziHNz8zfM1rztgAw&usqp=CAU);

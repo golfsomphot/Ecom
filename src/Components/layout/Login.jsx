@@ -1,21 +1,30 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-// import Harder from "./Harder";
 
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Harder from "./Harder";
+import Label from "react-bootstrap/FormLabel"
 const Login = () => {
-
   const [usname, setNameu] = useState("");
   const [password, setPw] = useState("");
 
   const history = useNavigate();
 
-
   const activeUser = {
     usname,
     password,
   };
+
+  
+
+
+
   const Btn_profile = async (event) => {
     try {
       event.preventDefault();
@@ -23,8 +32,7 @@ const Login = () => {
 
       if (rowdata !== undefined) {
         console.log("rowdata", rowdata);
-        history("Profile");
-
+        history("/");
       }
     } catch (error) {
       console.log("error", error);
@@ -60,34 +68,54 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-     
-      <form onSubmit={Btn_profile}>
-        <div className="from-control">
-          <label> เข้าสู่ระบบ</label>
-        </div>
-        <div
-          className="from-control"
-          style={{ paddingLeft: "5%", paddingRight: "5%" }}
-        >
-          <input type="text" onChange={Userchang} />
-          <label> Username</label>
-        </div>
-        <div
-          className="from-control"
-          style={{ paddingLeft: "5%", paddingRight: "5%" }}
-        >
-          <input type="password" onChange={Passchang} />
-          <label> Password</label>
-        </div>
-        <div className="from-control">
-          <Button variant="success" type="submit">
-            Success
-          </Button>{""}
-        </div>
-      </form>
-    </div>
+    <>
+      <Container fluid>
+        <Harder />
+        <div style={{width:'50%',backgroundColor:'whitesmoke'}} className="mx-auto text-center">
+        <Form onSubmit={Btn_profile} >
+          <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
+            <Label>เข้าสู่ระบบ</Label>
+            <Form.Label column sm="2">
+              Email
+            </Form.Label>
+            <Col sm="10">
+              <Form.Control
+                type="text"
+                value={usname}
+                placeholder="Email"
+                onChange={Userchang}
+              />
+            </Col>
+          </Form.Group>
 
+          <Form.Group
+            as={Row}
+            className="mb-3"
+            controlId="formPlaintextPassword"
+          >
+            <Form.Label column sm="2">
+              Password
+            </Form.Label>
+            <Col sm="10">
+              <Form.Control
+                type="password"
+                value={password}
+                placeholder="Password"
+                onChange={Passchang}
+              />
+            </Col>
+          </Form.Group>
+
+          <div className="from-control">
+            <Button variant="success" type="submit">
+              Success
+            </Button>
+            {""}
+          </div>
+        </Form>
+        </div>
+      </Container>
+    </>
   );
 };
 

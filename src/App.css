@@ -8,19 +8,16 @@
 }
 
 .login {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-attachment: fixed;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2As3yVNacdhwUZNvZ4rziHNz8zfM1rztgAw&usqp=CAU);
-  background-attachment: fixed;
   height: 100vh;
+  width: 100vw;
 }
 
 button {
-  width: 90%;
+  width: 100%;
 }
 
 input {
@@ -41,11 +38,12 @@ label {
 }
 
 .from-control {
-  background-color: azure;
+  background-color: rgb(153, 165, 193);
   text-align: center;
   /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
   justify-content: center;
   height: 30%;
+  width: 100%;
 
 }
 
@@ -58,12 +56,13 @@ label {
 
 }
 
-.imglogo{
+.imglogo {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-img{
-  height: 50%;
+
+img {
+  height: 300px;
 }

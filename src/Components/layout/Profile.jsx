@@ -25,31 +25,32 @@ function Profile() {
       }
     };
 
+
     return (
-      <div   >
-        <Container>
-          <Row style={{ height: "100vh" }}>
+      <Container>
+        <Row style={{ height: "100vh" }}>
 
 
-            <Col xl={12} md={6}>
-              <img
-                src={Imagechange}
-                alt=""
-                style={{ borderRadius: "2%", cursor: "pointer" }}
-                onClick={handleImageClick}
-              />
-              <input
-                type="file"
-                ref={fileInputRef}
-                style={{ display: "none" }}
-                onChange={handleFileChange}
-              />
-            </Col>
-
-          </Row>
-        </Container>
-      </div>
+          <Col xl={12} md={6}>
+            <img
+              src={Imagechange}
+              alt=""
+              style={{ borderRadius: "2%", cursor: "pointer" }}
+              onClick={handleImageClick}
+            />
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
+          </Col>
+        </Row>
+      </Container>
     );
+
+
+
   };
 
   return (

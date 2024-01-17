@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import Harder from "./Harder";
+// import Harder from "./Harder";
 
 const Login = () => {
-  <Harder/>
+
   const [usname, setNameu] = useState("");
   const [password, setPw] = useState("");
 
   const history = useNavigate();
- 
+
 
   const activeUser = {
     usname,
@@ -20,12 +20,12 @@ const Login = () => {
     try {
       event.preventDefault();
       let rowdata = await fetchData(activeUser);
-       
+
       if (rowdata !== undefined) {
         console.log("rowdata", rowdata);
         history("Profile");
-        
-      }  
+
+      }
     } catch (error) {
       console.log("error", error);
     }
@@ -59,11 +59,9 @@ const Login = () => {
     setPw(event.target.value);
   };
 
-  return (  
-
-
-    
+  return (
     <div className="login">
+     
       <form onSubmit={Btn_profile}>
         <div className="from-control">
           <label> เข้าสู่ระบบ</label>
@@ -89,6 +87,7 @@ const Login = () => {
         </div>
       </form>
     </div>
+
   );
 };
 

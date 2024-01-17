@@ -5,15 +5,16 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
+import { Form as BootstrapForm, InputGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faCartShopping, faSearch, faLanguage } from '@fortawesome/free-solid-svg-icons';
 
 
 
 import Dropdown from 'react-bootstrap/Dropdown';
- 
 
-import Logo from '../../Assets/log.jpg'
+
+import Logo from '../../Assets/log.png'
 import { Col, Row } from "react-bootstrap";
 const Harder = () => {
   return (
@@ -51,26 +52,24 @@ const Harder = () => {
               <Form className="d-flex  ">
 
                 <Button style={{ marginRight: '5%' }} href="Login" variant="outline-secondary">
-                  <FontAwesomeIcon icon={faUser} style={{ fontSize: '0.8em' }} />
+                  <FontAwesomeIcon icon={faUser} style={{ fontSize: '0.7em', textAlign: 'center',marginBottom:'0.3vh' }} />
                   LOGIN
                 </Button>
 
-
-
-
-
                 <Button style={{ marginRight: '5%' }} href="" variant="outline-secondary" >
-                  <FontAwesomeIcon icon={faHeart} style={{ fontSize: '0.8em' }} />
+                  <FontAwesomeIcon icon={faHeart} style={{ fontSize: '0.7em' }} />
                   รายการโปรด
                 </Button>
                 <Button style={{ marginRight: '5%' }} href="" variant="outline-secondary" >
-                  <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '0.8em' }} />
+                  <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '0.7em' }} />
                   กระเป๋าช็อปปิ้ง
                 </Button>
 
-                <Dropdown>
+                <Dropdown style={{ width: '3vw' }}>
+
                   <Dropdown.Toggle variant="outline-secondary" id="dropdown-basic">
-                    ไทย
+                    <FontAwesomeIcon icon={faLanguage} style={{ fontSize: '0.8em' }} />
+
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -92,13 +91,21 @@ const Harder = () => {
         </Col>
 
 
-        <Col xl={4}>
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
+        <Col xl={4} className="d-flax">
+          <InputGroup className="mb-3">
+            <InputGroup.Text style={{ cursor: 'pointer' }}>
+              <FontAwesomeIcon icon={faSearch} />
+            </InputGroup.Text>
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+
+          </InputGroup>
+
+
         </Col>
       </Row>
 

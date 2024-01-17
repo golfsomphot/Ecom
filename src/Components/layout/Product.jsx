@@ -20,7 +20,7 @@ const Product = () => {
         <>
             <Harder />
             <Row>
-                <Col xl={4}  >
+                <Col xl={4} md={6} xs={12} >
                     <Card style={{ width: '18rem', margin: '10px' }} className="mx-auto text-center">
                         <img src={Imgcade} alt="" />
                         <Card.Body>
@@ -34,7 +34,7 @@ const Product = () => {
                     </Card>
                 </Col>
 
-                <Col xl={4}  >
+                <Col xl={4} md={6} xs={12}  >
                     <Card style={{ width: '18rem', margin: '10px' }} className="mx-auto text-center">
                         <img src={Imgcade1} alt="" />
                         <Card.Body>
@@ -48,7 +48,7 @@ const Product = () => {
                     </Card>
                 </Col>
 
-                <Col xl={4}  >
+                <Col xl={4} md={6} xs={12} >
                     <Card style={{ width: '18rem', margin: '10px' }} className="mx-auto text-center">
                         <img src={Imgcade2} alt="" />
                         <Card.Body>

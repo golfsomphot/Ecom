@@ -1,16 +1,17 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
+
 .btnlogin {
   width: 10%;
 }
 
 .login {
-  
+
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   background-attachment: fixed;
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2As3yVNacdhwUZNvZ4rziHNz8zfM1rztgAw&usqp=CAU);
@@ -29,33 +30,32 @@ input {
   padding-left: 2%;
   padding-right: 2%;
   background-color: beige;
-  
+
 }
- 
+
 label {
   margin: 10px 0;
   display: inline-block;
   text-align: center;
   justify-content: center;
 }
-.from-control{
+
+.from-control {
   background-color: azure;
   text-align: center;
   /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
   justify-content: center;
   height: 30%;
- 
+
 }
+
 .pic {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
-   
+
 }
- img {
-  width: auto;
-  height: 100vh;
- }
+
  

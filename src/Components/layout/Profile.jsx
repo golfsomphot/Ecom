@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import imageUrl1 from "../../Assets/bg.jpeg";
-import marlene from "../../Assets/pexels-marlene-leppänen-1183266.jpg"
-import Harder from "./Harder";
 
+import Harder from "./Harder";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 function Profile() {
   const [Imagechange, setImagechange] = useState(imageUrl1);
   const Pic = () => {
@@ -24,15 +26,12 @@ function Profile() {
     };
 
     return (
-      <div className="r" >
-        <div className="container">
-          <div className="row" style={{ height: "100vh" }}>
-            <div className="col-6 r">
-              <img
-              style={{ borderRadius: "2%", cursor: "pointer" }} 
-              src={marlene} alt="" />
-            </div>
-            <div className="col-6">
+      <div   >
+        <Container>
+          <Row style={{ height: "100vh" }}>
+
+
+            <Col xl={12} md={6}>
               <img
                 src={Imagechange}
                 alt=""
@@ -45,9 +44,10 @@ function Profile() {
                 style={{ display: "none" }}
                 onChange={handleFileChange}
               />
-            </div>
-          </div>
-        </div>
+            </Col>
+
+          </Row>
+        </Container>
       </div>
     );
   };
@@ -55,9 +55,7 @@ function Profile() {
   return (
     <div>
       <Harder />
-      <div className="pic">
-        <Pic />
-      </div>
+      <Pic />
     </div>
   );
 }

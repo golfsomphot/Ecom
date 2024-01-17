@@ -5,15 +5,23 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
- 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
+import Logo from '../../Assets/log.jpg'
 const Harder = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand href="#">Myreaceweb</Navbar.Brand>
+      <Navbar expand="lg" className="bg-body-tertiary" bg="light" data-bs-theme="light">
+        <Container fluid  >
+
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
+
+
+
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
@@ -22,18 +30,17 @@ const Harder = () => {
               <Nav.Link href="/Harder">Home</Nav.Link>
               <Nav.Link href="Product">Product</Nav.Link>
               <Nav.Link href="/Profile">Profile</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-               
+
+
             </Nav>
+
+
+            <Nav>
+              <img src={Logo} alt="" style={{ width: '5vw', height: '10vh' }} className="imglogo" />
+            </Nav>
+
+
+
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -41,17 +48,19 @@ const Harder = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button style={{marginRight:'5%'}} className="btnSearch" variant="outline-success">
+              <Button style={{ marginRight: '5%' }} className="btnSearch" variant="outline-success">
                 Search
               </Button>
-              <Button style={{marginRight:'5%'}} href="Login" className="btnSearch" variant="outline-danger">
+              <Button style={{ marginRight: '5%' }} href="Login" className="btnSearch" variant="outline-danger">
                 login
               </Button>
             </Form>
-            
+
+
           </Navbar.Collapse>
+
         </Container>
-      </Navbar>
+      </Navbar >
     </>
   );
 };

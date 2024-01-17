@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Imgcade from '../../Assets/bg.jpeg'
 import Harder from './Harder';
+
 const Product = () => {
     return (
 

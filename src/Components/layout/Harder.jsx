@@ -6,11 +6,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Dropdown from 'react-bootstrap/Dropdown';
+ 
 
 import Logo from '../../Assets/log.jpg'
 import { Col, Row } from "react-bootstrap";
@@ -50,25 +51,34 @@ const Harder = () => {
               <Form className="d-flex  ">
 
                 <Button style={{ marginRight: '5%' }} href="Login" variant="outline-secondary">
-                  <FontAwesomeIcon icon={faUser} style={{ fontSize: '1em' }} />
+                  <FontAwesomeIcon icon={faUser} style={{ fontSize: '0.8em' }} />
                   LOGIN
                 </Button>
 
 
 
 
-                <NavDropdown title="Thai" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#">ไทย</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">English</NavDropdown.Item>
-                </NavDropdown>
+
                 <Button style={{ marginRight: '5%' }} href="" variant="outline-secondary" >
-                  <FontAwesomeIcon icon={faHeart} style={{ fontSize: '1em' }} />
+                  <FontAwesomeIcon icon={faHeart} style={{ fontSize: '0.8em' }} />
                   รายการโปรด
                 </Button>
+                <Button style={{ marginRight: '5%' }} href="" variant="outline-secondary" >
+                  <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '0.8em' }} />
+                  กระเป๋าช็อปปิ้ง
+                </Button>
 
+                <Dropdown>
+                  <Dropdown.Toggle variant="outline-secondary" id="dropdown-basic">
+                    ไทย
+                  </Dropdown.Toggle>
 
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">ไทย</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">English</Dropdown.Item>
 
+                  </Dropdown.Menu>
+                </Dropdown>
               </Form>
             </Col>
 

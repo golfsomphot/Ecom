@@ -21,7 +21,7 @@ const Login = () => {
     password,
   };
 
-  
+
 
 
 
@@ -71,48 +71,51 @@ const Login = () => {
     <>
       <Container fluid>
         <Harder />
-        <div style={{width:'50%',backgroundColor:'whitesmoke'}} className="mx-auto text-center">
-        <Form onSubmit={Btn_profile} >
-          <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
-            <Label>เข้าสู่ระบบ</Label>
-            <Form.Label column sm="2">
-              Email
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="text"
-                value={usname}
-                placeholder="Email"
-                onChange={Userchang}
-              />
-            </Col>
-          </Form.Group>
+        <div style={{ width: '50%', backgroundColor: 'whitesmoke' }} className="mx-auto text-center">
+          <Form onSubmit={Btn_profile} >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
+              <Label>เข้าสู่ระบบ</Label>
+              <Form.Label column sm="2">
+                Email
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="text"
+                  value={usname}
+                  placeholder="Email"
+                  onChange={Userchang}
+                />
+              </Col>
+            </Form.Group>
 
-          <Form.Group
-            as={Row}
-            className="mb-3"
-            controlId="formPlaintextPassword"
-          >
-            <Form.Label column sm="2">
-              Password
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="password"
-                value={password}
-                placeholder="Password"
-                onChange={Passchang}
-              />
-            </Col>
-          </Form.Group>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="2">
+                Password
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="password"
+                  value={password}
+                  placeholder="Password"
+                  onChange={Passchang}
+                />
+              </Col>
+            </Form.Group>
+            <div>
+             <label htmlFor=""> สมัครสมาชิก</label>  
+            </div>
 
-          <div className="from-control">
-            <Button variant="success" type="submit">
-              Success
-            </Button>
-            {""}
-          </div>
-        </Form>
+            <div className="from-control">
+              <Button variant="success" type="submit">
+                Success
+              </Button>
+              {""}
+            </div>
+          </Form>
         </div>
       </Container>
     </>

@@ -11,8 +11,10 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Harder from "./Harder";
-import Label from "react-bootstrap/FormLabel"
+
 import { Link } from 'react-router-dom';
+
+
 const Login = () => {
   const [usname, setNameu] = useState("");
   const [password, setPw] = useState("");
@@ -80,121 +82,128 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: '#bdc3c7', height: '100%' }} >
       <Harder />
-      <Container fluid>
-        <Container   >
-          <Row style={{ marginTop: '10vh' }} >
-            <Col xl={6}>
-              <img src={Imgformlogin} alt="" width={'100%'} />
-            </Col>
 
+      <Container   >
+        <Row style={{ paddingBottom: '10vh', paddingTop: '14vh' }}  >
 
-            <Col xl={6} style={{ padding: '0px' }}    >
+          <Col xl={6} md={12} xs={12} sm={12} style={{ padding: '0px' }}>
+            <img src={Imgformlogin} alt="" width={'100%'} style={{ borderRadius: '10px', height: '100%' }} />
+          </Col>
 
-              <div style={{ backgroundColor: 'whitesmoke', borderRadius: '10px', display: 'flex', justifyContent: 'center' }} width={'100%'}  >
+          <Col xl={6} md={12} xs={12} sm={12} style={{ padding: '0px' }}  >
 
-                <Form onSubmit={Btn_profile}  >
+            <div style={{ backgroundColor: 'whitesmoke', borderRadius: '10px', display: 'flex', justifyContent: 'center', height: '100%' }} width={'100%'}  >
 
-                  <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
-                    {logform && <h2>เข้าสู่ระบบ</h2>}
-                    {id && <h2>สมัครสมาชิก</h2>}
+              <Form onSubmit={Btn_profile} style={{ margin: '0', padding: '0' }} >
 
-                    <Form.Label column sm="2">
-                      Username
-                    </Form.Label>
-                    <Col sm="10">
-                      <Form.Control
-                        type="text"
-                        value={usname}
-                        placeholder="Username"
-                        onChange={Userchang}
-                      />
-                    </Col>
-                  </Form.Group>
+                <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
+                  {logform && <h2>Welcome</h2>}
+                  {id &&
+                    <h2>สมัครสมาชิก</h2>
+                  }
+
+                  <Form.Label column sm="2">
+                    Username
+                  </Form.Label>
+                  <Col sm="10">
+                    <Form.Control
+                      type="text"
+                      value={usname}
+                      placeholder="Username"
+                      onChange={Userchang}
+                    />
+                  </Col>
+                </Form.Group>
+
+                <Form.Group
+                  as={Row}
+                  className="mb-3"
+                  controlId="formPlaintextPassword"
+                >
+                  <Form.Label column sm="2">
+                    Password
+                  </Form.Label>
+                  <Col sm="10">
+                    <Form.Control
+                      type="password"
+                      value={password}
+                      placeholder="Password"
+                      onChange={Passchang}
+                    />
+                  </Col>
+                </Form.Group>
+
+                {/* #regiter  */}
+                {id &&
+
 
                   <Form.Group
+
                     as={Row}
                     className="mb-3"
                     controlId="formPlaintextPassword"
                   >
+
                     <Form.Label column sm="2">
-                      Password
+                      Email
                     </Form.Label>
                     <Col sm="10">
                       <Form.Control
-                        type="password"
+                        type="text"
                         value={password}
-                        placeholder="Password"
+                        placeholder="Email"
                         onChange={Passchang}
                       />
                     </Col>
+
+                    <Form.Label column sm="2">
+                      password
+                    </Form.Label>
+                    <Col sm="10">
+                      <Form.Control
+                        type="text"
+                        value={password}
+                        placeholder="password"
+                        onChange={Passchang}
+                      />
+                    </Col>
+
+
+                    <Form.Label column sm="2">
+                      confirmPassword
+                    </Form.Label>
+                    <Col sm="10">
+                      <Form.Control
+                        type="text"
+                        value={password}
+                        placeholder="confirmPassword"
+                        onChange={Passchang}
+                      />
+                    </Col>
+
                   </Form.Group>
 
-                  {/* #regiter  */}
-                  {id &&
-                    <Form.Group
-                      as={Row}
-                      className="mb-3"
-                      controlId="formPlaintextPassword"
-                    >
-                      <Form.Label column sm="2">
-                        Email
-                      </Form.Label>
-                      <Col sm="10">
-                        <Form.Control
-                          type="text"
-                          value={password}
-                          placeholder="Email"
-                          onChange={Passchang}
-                        />
-                      </Col>
+                }
+
+                <Link onClick={Btnregiter} >สมัครสมาชิก</Link>
+                <div className="from-control" style={{ marginTop: '5vh', marginBottom: '5vh' }}>
+                  <Button variant="outline-success" type="submit">
+                    Submit
+                  </Button>
+                  {""}
+                </div>
+              </Form>
+            </div>
 
 
-                      <Form.Label column sm="2">
-                        password
-                      </Form.Label>
-                      <Col sm="10">
-                        <Form.Control
-                          type="text"
-                          value={password}
-                          placeholder="password"
-                          onChange={Passchang}
-                        />
-                      </Col>
-                      <Form.Label column sm="2">
-                        confirmPassword
-                      </Form.Label>
-                      <Col sm="10">
-                        <Form.Control
-                          type="text"
-                          value={password}
-                          placeholder="confirmPassword"
-                          onChange={Passchang}
-                        />
-                      </Col>
-
-                    </Form.Group>
-
-                  }
-
-                  <Link onClick={Btnregiter} >สมัครสมาชิก</Link>
-                  <div className="from-control" style={{ marginTop: '5vh' }}>
-                    <Button variant="success" type="submit">
-                      Submit
-                    </Button>
-                    {""}
-                  </div>
-                </Form>
-              </div>
-
-
-            </Col>
-          </Row>
-        </Container>
-
+          </Col>
+        </Row>
       </Container>
-    </>
+
+
+    </div>
   );
 };
 

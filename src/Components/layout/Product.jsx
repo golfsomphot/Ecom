@@ -11,9 +11,11 @@ import Container from 'react-bootstrap/Container';
 import Harder from "./Harder";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-
 import Form from "react-bootstrap/Form";
+
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Form as BootstrapForm, InputGroup } from 'react-bootstrap';
@@ -23,6 +25,33 @@ const Product = () => {
   return (
     <>
       <Harder />
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={Imgcade}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={Imgcade1}
+            alt="Second slide"
+          />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Some representative placeholder content for the second slide.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        {/* เพิ่ม Carousel.Item ต่อไปตามต้องการ */}
+      </Carousel>
+
+
       <Container>
         <Row>
           <Col xl={8}>

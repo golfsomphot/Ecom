@@ -35,8 +35,8 @@ const Harder = () => {
                 navbarScroll
               >
                 <Nav.Link href="/Harder">Home</Nav.Link>
-                <Nav.Link href="Product">Product</Nav.Link>
-                <Nav.Link href="/">Profile</Nav.Link>
+                <Nav.Link href="/">Product</Nav.Link>
+                <Nav.Link href="/Profile">Profile</Nav.Link>
               </Nav>
             </Col>
 

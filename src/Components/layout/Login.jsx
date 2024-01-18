@@ -17,7 +17,8 @@ const Login = () => {
   const [usname, setNameu] = useState("");
   const [password, setPw] = useState("");
 
-  const [id, setId] = useState(true)
+  const [id, setId] = useState(false)
+  const [logform, setlogform] = useState(true)
 
 
   const history = useNavigate();
@@ -30,7 +31,8 @@ const Login = () => {
   const Btnregiter = () => {
 
     setId(!id);
-
+    setlogform(!logform);
+    return
   }
 
 
@@ -81,8 +83,6 @@ const Login = () => {
     <>
       <Harder />
       <Container fluid>
-
-
         <Container   >
           <Row style={{ marginTop: '10vh' }} >
             <Col xl={6}>
@@ -97,7 +97,8 @@ const Login = () => {
                 <Form onSubmit={Btn_profile}  >
 
                   <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" >
-                    <h2>เข้าสู่ระบบ</h2>
+                    {logform && <h2>เข้าสู่ระบบ</h2>}
+                    {id && <h2>สมัครสมาชิก</h2>}
 
                     <Form.Label column sm="2">
                       Username

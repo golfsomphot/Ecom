@@ -19,16 +19,7 @@
 button {
   width: 100%;
 }
-
-input {
-  display: block;
-  width: 100%;
-  border: none;
-  padding-left: 2%;
-  padding-right: 2%;
-  background-color: beige;
-
-}
+ 
 
 label {
   margin: 10px 0;
@@ -37,16 +28,8 @@ label {
   justify-content: center;
 }
 
-.from-control {
-  background-color: rgb(153, 165, 193);
-  text-align: center;
-  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
-  justify-content: center;
-  height: 30%;
-  width: 100%;
-
-}
-
+ 
+/* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
 .pic {
   display: flex;
   flex-direction: column;
@@ -66,3 +49,9 @@ label {
 img {
   height: 300px;
 }
+@media (max-width: 768px) {
+  img {
+    max-width: 80%;
+  }
+}
+ 

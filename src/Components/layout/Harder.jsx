@@ -53,7 +53,7 @@ const Harder = () => {
 
                 <Button style={{ marginRight: '5%' }} href="Login" variant="outline-secondary">
                   <FontAwesomeIcon icon={faUser} style={{ fontSize: '0.7em', textAlign: 'center',marginBottom:'0.3vh' }} />
-                  LOGIN
+                  เข้าสู่ระบบ
                 </Button>
 
                 <Button style={{ marginRight: '5%' }} href="" variant="outline-secondary" >
@@ -85,29 +85,8 @@ const Harder = () => {
 
         </Container>
       </Navbar >
-      <Row>
-        <Col xl={8}>
 
-        </Col>
-
-
-        <Col xl={4} className="d-flax">
-          <InputGroup className="mb-3">
-            <InputGroup.Text style={{ cursor: 'pointer' }}>
-              <FontAwesomeIcon icon={faSearch} />
-            </InputGroup.Text>
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-
-          </InputGroup>
-
-
-        </Col>
-      </Row>
+      
 
 
 

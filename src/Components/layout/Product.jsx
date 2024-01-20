@@ -24,8 +24,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Product = () => {
   return (
     <>
-      <Harder />
+       
+       <Harder />
       <Carousel>
+      
         <Carousel.Item>
           <img
             className="d-block w-100"

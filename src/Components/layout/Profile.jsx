@@ -5,6 +5,7 @@ import Harder from "./Harder";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 function Profile() {
   const [Imagechange, setImagechange] = useState(imageUrl1);
   const Pic = () => {
@@ -27,8 +28,10 @@ function Profile() {
 
 
     return (
-      
+
       <Container>
+
+
         <Row style={{ height: "100vh" }}>
 
 

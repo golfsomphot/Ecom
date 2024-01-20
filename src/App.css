@@ -47,11 +47,11 @@ label {
 }
 
 img {
-  height: 300px;
+  height: 250px;
 }
 @media (max-width: 768px) {
   img {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
  
